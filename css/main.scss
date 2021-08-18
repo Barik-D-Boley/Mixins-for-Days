@@ -1,0 +1,18 @@
+@use 'mixins' as mixins;
+
+@font-face {
+    font-family: oswald;
+    src: url(fonts/Oswald.ttf);
+}
+
+$primary-color: #f8941c;
+$secondary-color: lightgray;
+$main-font: oswald;
+
+body {
+    margin: 0;
+}
+
+#navbar {
+    @include mixins.left-navbar($primary-color, $secondary-color, $main-font);
+}

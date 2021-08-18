@@ -1,0 +1,92 @@
+/* Do four mixins with the class */
+//1. For fading stuff in and out
+@mixin fade($type) {
+    @if $type == 'hide' {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s opacity 1s;
+    } @else if $type == 'show' {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s opacity 1s;
+    }
+}
+
+//2. Custom fonts
+@mixin font-face($font-name, $file-name, $weight:normal, $style:normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name+".eot"); 
+        src: url($file-name+".eot") format(embedded-opentype)
+        url($file-name+".woff") format("woff"),
+        url($file-name+".ttf") format("truetype"),
+        url($file-name+".svg") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+//3. This is a simple way to define a box
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+//4. Cover my whole background
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 
+div {
+    background-image: url('img.png');
+    @include mixin.cover-background;
+*/
+
+//5. This is when we use ::after and ::before
+@mixin beforeAfter(
+    $width: 100%,
+    $height: 100%,
+    $display: block,
+    $pos: absolute,
+    $content: ""
+) {
+    content: $content;
+    display: $display;
+    position: $pos;
+    @include box($width, $height);
+}
+
+/* Do it on your own */
+//1. Navbar
+@mixin left-navbar($primary-color, $secondary-color, $font, $height:10%) {
+    //Flex Stuff
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    //Background
+    background-color: $secondary-color;
+    padding: .2%;
+
+    //Foreground
+    a {
+        background-color: $primary-color;
+        width: 12%;
+        margin-right: .1%;
+        font-family: $font;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        height: 1%;
+        &:hover {
+            color: gray;
+        }
+    }
+}
+
+//2. Footer

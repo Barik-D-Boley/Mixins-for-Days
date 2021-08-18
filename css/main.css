@@ -1,0 +1,37 @@
+/* Do four mixins with the class */
+/* 
+div {
+    background-image: url('img.png');
+    @include mixin.cover-background;
+*/
+/* Do it on your own */
+@font-face {
+  font-family: oswald;
+  src: url(fonts/Oswald.ttf);
+}
+body {
+  margin: 0;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: lightgray;
+  padding: 0.2%;
+}
+#navbar a {
+  background-color: #f8941c;
+  width: 12%;
+  margin-right: 0.1%;
+  font-family: oswald;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  height: 1%;
+}
+#navbar a:hover {
+  color: gray;
+}/*# sourceMappingURL=main.css.map */
