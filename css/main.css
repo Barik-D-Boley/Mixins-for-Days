@@ -20,18 +20,36 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   background-color: lightgray;
-  padding: 0.2%;
+  padding: 0.4%;
 }
 #navbar a {
   background-color: #f8941c;
-  width: 12%;
-  margin-right: 0.1%;
   font-family: oswald;
+  width: 8%;
+  margin-left: 0.7%;
+  height: 1%;
+  font-size: 160%;
+  border-radius: 5%;
   text-align: center;
   text-decoration: none;
   color: black;
-  height: 1%;
 }
 #navbar a:hover {
-  color: gray;
+  color: lightgray;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer #contactUs {
+  text-decoration: none;
+  color: white;
+}
+footer #contactUs:hover {
+  color: #d6d6d6;
 }/*# sourceMappingURL=main.css.map */

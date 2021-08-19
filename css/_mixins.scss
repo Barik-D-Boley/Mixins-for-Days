@@ -61,7 +61,7 @@ div {
 
 /* Do it on your own */
 //1. Navbar
-@mixin left-navbar($primary-color, $secondary-color, $font, $height:10%) {
+@mixin left-navbar($primary-color, $secondary-color, $font) {
     //Flex Stuff
     display: flex;
     flex-direction: row;
@@ -71,22 +71,45 @@ div {
 
     //Background
     background-color: $secondary-color;
-    padding: .2%;
+    padding: .4%;
 
     //Foreground
     a {
+        //Variables
         background-color: $primary-color;
-        width: 12%;
-        margin-right: .1%;
         font-family: $font;
+        &:hover {
+            color: $secondary-color;
+        }
+
+        //Numbers
+        width: 8%;
+        margin-left: .7%;
+        height: 1%;
+        font-size: 160%;
+        border-radius: 5%;
+
+        //Text decoration
         text-align: center;
         text-decoration: none;
         color: black;
-        height: 1%;
-        &:hover {
-            color: gray;
-        }
     }
 }
 
 //2. Footer
+@mixin simple-footer($footer-background, $footer-text-color, $footer-hover) {
+    background-color: $footer-background;
+    color: $footer-text-color;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    #contactUs {
+        text-decoration: none;
+        color: $footer-text-color;
+        &:hover {
+            color: $footer-hover;
+        }
+    }
+}

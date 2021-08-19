@@ -9,10 +9,18 @@ $primary-color: #f8941c;
 $secondary-color: lightgray;
 $main-font: oswald;
 
+$footer-background: hsl(0, 0%, 0%);
+$footer-text-color: hsl(0, 100%, 100%);
+$footer-hover: rgb(214, 214, 214);
+
 body {
     margin: 0;
 }
 
 #navbar {
     @include mixins.left-navbar($primary-color, $secondary-color, $main-font);
+}
+
+footer {
+    @include mixins.simple-footer($footer-background, $footer-text-color, $footer-hover);
 }
