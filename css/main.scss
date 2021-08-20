@@ -22,5 +22,5 @@ body {
 }
 
 footer {
-    @include mixins.simple-footer($footer-background, $footer-text-color, $footer-hover);
+    @include mixins.simple-footer($footer-background, $footer-text-color, $footer-hover, $font);
 }
