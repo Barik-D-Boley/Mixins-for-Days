@@ -1,10 +1,3 @@
-/* Do four mixins with the class */
-/* 
-div {
-    background-image: url('img.png');
-    @include mixin.cover-background;
-*/
-/* Do it on your own */
 @font-face {
   font-family: oswald;
   src: url(fonts/Oswald.ttf);
@@ -41,6 +34,7 @@ body {
 footer {
   background-color: black;
   color: white;
+  font-family: oswald;
   text-align: center;
   position: absolute;
   bottom: 0;
